@@ -101,3 +101,18 @@ section {
   padding: var(--space-l);
   margin-bottom: var(--space-m);
 }
+
+p {
+  margin: 0 0 var(--space-s);
+}
+
+h2 {
+  margin: 0 0 var(--space-s);
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
