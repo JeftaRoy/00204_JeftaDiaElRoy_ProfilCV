@@ -87,3 +87,17 @@ nav a:hover {
   background: var(--accent-soft);
   color: var(--accent);
 }
+
+main {
+  max-width: 720px;
+  margin: var(--space-l) auto;
+  padding: 0 var(--space-m);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-l);
+  margin-bottom: var(--space-m);
+}
