@@ -56,3 +56,34 @@ header p {
   margin: 0;
   opacity: 0.9;
 }
+
+nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  padding: var(--space-s) 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: var(--space-s) var(--space-m);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+nav a:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
