@@ -1,43 +1,58 @@
+:root {
+  /* Warna */
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #1d4ed8;
+  --accent-soft: #dbeafe;
+  --on-accent: #ffffff;
+  --border: #e5e7eb;
+
+  /* Spasi */
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+
+  /* Bentuk & huruf */
+  --radius: 12px;
+  --font: "Segoe UI", system-ui, sans-serif;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    line-height: 1.6;
-    padding: 20px;
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
 }
 
-.daftar-isi {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: center;
+header {
+  background: var(--accent);
+  color: var(--on-accent);
+  text-align: center;
+  padding: var(--space-l) var(--space-m);
 }
 
-.daftar-isi li {
-    display: inline;
-    text-align: center;
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--on-accent);
+  object-fit: cover;
 }
 
-#header {
-    background-color: #f4f4f4;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px;
+header h1 {
+  margin: var(--space-m) 0 var(--space-s);
+  font-size: 2rem;
 }
 
-.kartu {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.footer{
-    text-align: center;
+header p {
+  margin: 0;
+  opacity: 0.9;
 }
