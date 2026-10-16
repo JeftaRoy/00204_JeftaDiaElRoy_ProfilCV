@@ -7,6 +7,7 @@ https://jeftaroy.github.io/00204_JeftaDiaElRoy_ProfilCV/
 
 ## Teknologi
 - HTML5
+- CSS3
 
 ## Cara Membuka
 Buka file `index.html` langsung di browser, atau kunjungi link live di atas.
