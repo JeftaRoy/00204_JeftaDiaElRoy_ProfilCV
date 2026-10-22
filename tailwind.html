@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jefta Dia El Roy - Profil</title>
+  <title>Jefta Dia El Roy - Profil (Tailwind)</title>
 
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<body>
-  <header id="header">
-    <img src="images/foto-profil.jpg" alt="Foto profil Jefta Dia El ROy" width="200">
-    <h1 style="font-family: Arial, sans-serif;">Jefta Dia El Roy</h1>
-    <p>Mahasiswa Sistem Informasi | UDINUS PSDKU Kediri</p>
-  </header>
+<header class="bg-blue-700 text-white text-center px-4 py-6 flex flex-col items-center gap-2">
+  <img src="images/foto-profil.jpg" alt="Foto profil Jefta Dia El Roy" class="w-20 h-20 rounded-full border-4 border-white object-cover">
+  <h1 class="text-3xl font-bold">Jefta Dia El Roy</h1>
+  <p class="text-blue-100">Mahasiswa Sistem Informasi | UDINUS PSDKU Kediri</p>
+</header>
 
-  <nav>
-    <ul class="daftar-isi">
-      <li><a href="#tentang">Tentang Saya</a></li>
-      <li><a href="#pendidikan">Pendidikan</a></li>
-      <li><a href="#keahlian">Keahlian</a></li>
-      <li><a href="#organisasi">Organisasi</a></li>
-      <li><a href="#pengalaman">Pengalaman Kerja</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
+<nav class="bg-white border-b border-gray-200 py-2">
+  <ul class="daftar-isi flex flex-wrap justify-center gap-2">
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#tentang" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Tentang Saya</a>
+    </li>
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#pendidikan" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Pendidikan</a>
+    </li>
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#keahlian" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Keahlian</a>
+    </li>
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#organisasi" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Organisasi</a>
+    </li>
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#pengalaman" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Pengalaman Kerja</a>
+    </li>
+    <li class="border-l-4 border-blue-700 pl-4 mb-4">
+      <a href="#kontak" class="block px-4 py-2 rounded-xl font-semibold text-gray-800 no-underline">Kontak</a>
+    </li>
+  </ul>
+</nav>
 
   <main>
+    <main class="max-w-3xl mx-auto my-6 px-4"></main>
 
-    <section id="tentang" class="kartu">
-      <h2>Tentang Saya</h2>
-      <p>
+    <section id="tentang" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Tentang Saya</h2>
+      <p class="text-gray-500">
         Saya adalah mahasiswa Sistem Informasi semester 3 yang tertarik pada pengembangan teknologi dan pembuatan
         website. Saya memiliki ketertarikan dalam membangun antarmuka web yang rapi, sederhana, dan mudah digunakan.
         Saya terus mengembangkan kemampuan di bidang teknologi informasi melalui berbagai tugas dan proyek perkuliahan.
@@ -41,30 +52,30 @@
       </p>
     </section>
 
-    <section id="pendidikan" class="kartu">
-      <h2>Pendidikan</h2>
+    <section id="pendidikan" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Pendidikan</h2>
       <ul>
         <li>
-          <h3>S1 Sistem Informasi — Universitas Dian Nuswantoro PSDKU Kediri</h3>
-          <p>2025 - sekarang</p>
+          <h3 class="text-lg font-semibold">S1 Sistem Informasi — Universitas Dian Nuswantoro PSDKU Kediri</h3>
+          <p class="text-gray-500">2025 - sekarang</p>
         </li>
         <li>
-          <h3>SMKN 1 Boyolangu</h3>
-          <p>2021 - 2024</p>
+          <h3 class="text-lg font-semibold">SMKN 1 Boyolangu</h3>
+          <p class="text-gray-500">2021 - 2024</p>
         </li>
         <li>
-          <h3>SMPN 3 Tulungagung</h3>
-          <p>2019 - 2022</p>
+          <h3 class="text-lg font-semibold">SMPN 3 Tulungagung</h3>
+          <p class="text-gray-500">2019 - 2022</p>
         </li>
         <li>
-          <h3>SD Kristen Petra Tulungagung</h3>
-          <p>2013 - 2019</p>
+          <h3 class="text-lg font-semibold">SD Kristen Petra Tulungagung</h3>
+          <p class="text-gray-500">2013 - 2019</p>
         </li>
       </ul>
     </section>
 
-    <section id="keahlian" class="kartu">
-      <h2>Keahlian</h2>
+    <section id="keahlian" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Keahlian</h2>
       <ul>
         <li>Pemrograman Dasar (C++)</li>
         <li>Pengembangan Website (HTML, CSS, PHP, MySQL)</li>
@@ -75,41 +86,41 @@
       </ul>
     </section>
 
-    <section id="organisasi" class="kartu">
-      <h2>Pengalaman Organisasi</h2>
+    <section id="organisasi" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Pengalaman Organisasi</h2>
       <ul>
         <li>
-          <h3>Tim Multimedia GKI Tulungagung</h3>
-          <p>Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti menyiapkan materi
+          <h3 class="text-lg font-semibold">Tim Multimedia GKI Tulungagung</h3>
+          <p class="text-gray-500">Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti menyiapkan materi
             presentasi, video, dan perangkat pendukung.</p>
         </li>
         <li>
-          <h3>Pelayanan Musik Gereja</h3>
-          <p>Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.</p>
+          <h3 class="text-lg font-semibold">Pelayanan Musik Gereja</h3>
+          <p class="text-gray-500">Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.</p>
         </li>
       </ul>
     </section>
 
-    <section id="pengalaman" class="kartu">
-      <h2>Pengalaman Kerja</h2>
+    <section id="pengalaman" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Pengalaman Kerja</h2>
       <ul>
         <li>
-          <h3>Senior Googling Specialist — Google</h3>
-          <p>2022 - 2024</p>
+          <h3 class="text-lg font-semibold">Senior Googling Specialist — Google</h3>
+          <p class="text-gray-500">2022 - 2024</p>
         </li>
         <li>
-          <h3>Professional Windows User — Microsoft</h3>
-          <p>2021 - 2023</p>
+          <h3 class="text-lg font-semibold">Professional Windows User — Microsoft</h3>
+          <p class="text-gray-500">2021 - 2023</p>
         </li>
         <li>
-          <h3>GPU Performance Analyst — NVIDIA</h3>
-          <p>2023 - sekarang</p>
+          <h3 class="text-lg font-semibold">GPU Performance Analyst — NVIDIA</h3>
+          <p class="text-gray-500">2023 - sekarang</p>
         </li>
       </ul>
     </section>
 
-    <section id="kontak">
-      <h2>Kontak</h2>
+    <section id="kontak" class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-4">
+      <h2 class="text-2xl font-bold text-blue-700">Kontak</h2>
       <ul>
         <li><a href="mailto:jeftadiaelroy13@gmail.com">jeftadiaelroy13@gmail.com</a></li>
         <li><a href="https://instagram.com/jeftaroyyy" target="_blank" rel="noopener">Instagram</a></li>
@@ -119,7 +130,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer text-center text-gray-500 text-sm px-4 py-6">
     <p>&copy; 2026 Jefta Dia El Roy</p>
   </footer>
 
