@@ -33,16 +33,14 @@
 
   </header>
 
-  <nav
-    <nav class="bg-white border-b border-[#d4d4d4] py-2 sticky top-0 z-10 dark:bg-[#262626] dark:border-[#525252]">
+  <nav <nav class="bg-white border-b border-[#d4d4d4] py-2 sticky top-0 z-10 dark:bg-[#262626] dark:border-[#525252]">
 
     <button id="tombol-menu" type="button"
       class="block mx-auto px-4 py-2 rounded-xl font-semibold text-[#262626] hover:bg-[#e5e5e5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] md:hidden dark:text-[#f5f5f5] dark:hover:bg-[#525252]">
       ☰ Menu
     </button>
 
-    <ul id="menu-nav"
-      class="hidden flex-col items-center gap-2 md:flex md:flex-row md:flex-wrap md:justify-center">
+    <ul id="menu-nav" class="hidden flex-col items-center gap-2 md:flex md:flex-row md:flex-wrap md:justify-center">
 
       <li>
         <a href="#tentang"
@@ -97,16 +95,25 @@
 
       <h2
         class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
-        Tentang Saya
+
+        <button id="tombol-tentang" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Tentang Saya <span id="ikon-tentang">▾</span>
+
+        </button>
       </h2>
 
-      <p class="text-[#737373] dark:text-[#a3a3a3]">
-        Saya adalah mahasiswa Sistem Informasi semester 3 yang tertarik pada pengembangan teknologi dan pembuatan
-        website. Saya memiliki ketertarikan dalam membangun antarmuka web yang rapi, sederhana, dan mudah digunakan.
-        Saya terus mengembangkan kemampuan di bidang teknologi informasi melalui berbagai tugas dan proyek perkuliahan.
-        Ke depannya, saya ingin terus belajar dan meningkatkan kemampuan untuk menciptakan solusi digital yang
-        bermanfaat.
-      </p>
+      <div id="isi-tentang">
+        <p class="text-[#737373] dark:text-[#a3a3a3]">
+          Saya adalah mahasiswa Sistem Informasi semester 3 yang tertarik pada pengembangan teknologi dan pembuatan
+          website. Saya memiliki ketertarikan dalam membangun antarmuka web yang rapi, sederhana, dan mudah digunakan.
+          Saya terus mengembangkan kemampuan di bidang teknologi informasi melalui berbagai tugas dan proyek
+          perkuliahan.
+          Ke depannya, saya ingin terus belajar dan meningkatkan kemampuan untuk menciptakan solusi digital yang
+          bermanfaat.
+        </p>
+      </div>
 
     </section>
 
@@ -156,10 +163,18 @@
 
       <h2
         class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
-        Keahlian
+
+        <button id="tombol-keahlian" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Keahlian <span id="ikon-keahlian">▾</span>
+
+        </button>
       </h2>
 
-      <ul id="daftar-skill" class="grid grid-cols-2 gap-2 md:grid-cols-4"></ul>
+      <div id="isi-keahlian">
+        <ul id="daftar-skill" class="grid grid-cols-2 gap-2 md:grid-cols-4"></ul>
+      </div>
 
     </section>
 
@@ -169,25 +184,33 @@
 
       <h2
         class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
-        Pengalaman Organisasi
+
+        <button id="tombol-organisasi" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Pengalaman Organisasi <span id="ikon-organisasi">▾</span>
+
+        </button>
       </h2>
 
-      <ul>
-        <li>
-          <h3 class="text-lg font-semibold">Tim Multimedia GKI Tulungagung</h3>
-          <p class="text-[#737373] dark:text-[#a3a3a3]">
-            Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti menyiapkan materi
-            presentasi, video, dan perangkat pendukung.
-          </p>
-        </li>
+      <div id="isi-organisasi">
+        <ul>
+          <li>
+            <h3 class="text-lg font-semibold">Tim Multimedia GKI Tulungagung</h3>
+            <p class="text-[#737373] dark:text-[#a3a3a3]">
+              Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti menyiapkan materi
+              presentasi, video, dan perangkat pendukung.
+            </p>
+          </li>
 
-        <li>
-          <h3 class="text-lg font-semibold">Pelayanan Musik Gereja</h3>
-          <p class="text-[#737373] dark:text-[#a3a3a3]">
-            Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.
-          </p>
-        </li>
-      </ul>
+          <li>
+            <h3 class="text-lg font-semibold">Pelayanan Musik Gereja</h3>
+            <p class="text-[#737373] dark:text-[#a3a3a3]">
+              Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.
+            </p>
+          </li>
+        </ul>
+      </div>
 
     </section>
 
@@ -197,25 +220,33 @@
 
       <h2
         class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
-        Pengalaman Kerja
+
+        <button id="tombol-pengalaman" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Pengalaman Kerja <span id="ikon-pengalaman">▾</span>
+
+        </button>
       </h2>
 
-      <ul>
-        <li>
-          <h3 class="text-lg font-semibold">Senior Googling Specialist — Google</h3>
-          <p class="text-[#737373] dark:text-[#a3a3a3]">2022 - 2024</p>
-        </li>
+      <div id="isi-pengalaman">
+        <ul>
+          <li>
+            <h3 class="text-lg font-semibold">Senior Googling Specialist — Google</h3>
+            <p class="text-[#737373] dark:text-[#a3a3a3]">2022 - 2024</p>
+          </li>
 
-        <li>
-          <h3 class="text-lg font-semibold">Professional Windows User — Microsoft</h3>
-          <p class="text-[#737373] dark:text-[#a3a3a3]">2021 - 2023</p>
-        </li>
+          <li>
+            <h3 class="text-lg font-semibold">Professional Windows User — Microsoft</h3>
+            <p class="text-[#737373] dark:text-[#a3a3a3]">2021 - 2023</p>
+          </li>
 
-        <li>
-          <h3 class="text-lg font-semibold">GPU Performance Analyst — NVIDIA</h3>
-          <p class="text-[#737373] dark:text-[#a3a3a3]">2023 - sekarang</p>
-        </li>
-      </ul>
+          <li>
+            <h3 class="text-lg font-semibold">GPU Performance Analyst — NVIDIA</h3>
+            <p class="text-[#737373] dark:text-[#a3a3a3]">2023 - sekarang</p>
+          </li>
+        </ul>
+      </div>
 
     </section>
 
@@ -225,31 +256,39 @@
 
       <h2
         class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
-        Kontak
+
+        <button id="tombol-kontak" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Kontak <span id="ikon-kontak">▾</span>
+
+        </button>
       </h2>
 
-      <ul>
-        <li>
-          <a href="mailto:jeftadiaelroy13@gmail.com"
-            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
-            jeftadiaelroy13@gmail.com
-          </a>
-        </li>
+      <div id="isi-kontak">
+        <ul>
+          <li>
+            <a href="mailto:jeftadiaelroy13@gmail.com"
+              class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+              jeftadiaelroy13@gmail.com
+            </a>
+          </li>
 
-        <li>
-          <a href="https://instagram.com/jeftaroyyy" target="_blank" rel="noopener"
-            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
-            Instagram
-          </a>
-        </li>
+          <li>
+            <a href="https://instagram.com/jeftaroyyy" target="_blank" rel="noopener"
+              class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+              Instagram
+            </a>
+          </li>
 
-        <li>
-          <a href="https://github.com/JeftaRoy" target="_blank" rel="noopener"
-            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
-            GitHub
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a href="https://github.com/JeftaRoy" target="_blank" rel="noopener"
+              class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
 
     </section>
 
