@@ -53,3 +53,14 @@ const buatPil = (skill) => {
 for (const skill of keahlian) {
     daftarSkill.append(buatPil(skill));
 }
+
+// Langkah 7 · Hamburger: buka/tutup menu
+const tombolMenu = document.querySelector("#tombol-menu");
+const menuNav = document.querySelector("#menu-nav");
+
+const toggleMenu = () => {
+  menuNav.classList.toggle("hidden");
+  menuNav.classList.toggle("flex");
+};
+
+tombolMenu.addEventListener("click", toggleMenu);
