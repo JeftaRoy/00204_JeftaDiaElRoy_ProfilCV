@@ -64,3 +64,15 @@ const toggleMenu = () => {
 };
 
 tombolMenu.addEventListener("click", toggleMenu);
+
+// Langkah 8 · Tutup menu setelah link diklik
+const tutupMenu = () => {
+  menuNav.classList.add("hidden");
+  menuNav.classList.remove("flex");
+};
+
+const linkMenu = document.querySelectorAll("#menu-nav a");
+
+for (const link of linkMenu) {
+  link.addEventListener("click", tutupMenu);
+}
