@@ -37,17 +37,27 @@ for (const skill of keahlian) {
 const daftarSkill = document.getElementById("daftar-skill");
 
 const buatPil = (skill) => {
-  const li = document.createElement("li");
-  li.textContent = skill.nama;
-  li.className = "flex items-center justify-center h-full text-sm font-semibold px-3 py-3 rounded-xl text-center";
+    const li = document.createElement("li");
+    li.textContent = skill.nama;
+    li.className = "flex items-center justify-center h-full text-sm font-semibold px-3 py-3 rounded-xl text-center";
 
-  if (skill.level === "mahir") {
-    li.classList.add("bg-blue-700", "text-white");
-  } else {
-    li.classList.add("bg-blue-100", "text-gray-800");
-  }
+    if (skill.level === "mahir") {
+        li.classList.add(
+            "bg-[#404040]",
+            "text-white",
+            "dark:bg-[#525252]",
+            "dark:text-white"
+        );
+    } else {
+        li.classList.add(
+            "bg-[#e5e5e5]",
+            "text-[#404040]",
+            "dark:bg-[#333333]",
+            "dark:text-[#d4d4d4]"
+        );
+    }
 
-  return li;
+    return li;
 };
 
 for (const skill of keahlian) {
@@ -76,3 +86,31 @@ const linkMenu = document.querySelectorAll("#menu-nav a");
 for (const link of linkMenu) {
   link.addEventListener("click", tutupMenu);
 }
+
+// Pilihan 1 · Accordion pendidikan
+const tombolPendidikan = document.querySelector("#tombol-pendidikan");
+const isiPendidikan = document.querySelector("#isi-pendidikan");
+const ikonPendidikan = document.querySelector("#ikon-pendidikan");
+
+tombolPendidikan.addEventListener("click", () => {
+  isiPendidikan.classList.toggle("hidden");
+
+  if (isiPendidikan.classList.contains("hidden")) {
+    ikonPendidikan.textContent = "▸";
+  } else {
+    ikonPendidikan.textContent = "▾";
+  }
+});
+
+// Pilihan 2 · Mode gelap
+const tombolTema = document.querySelector("#tombol-tema");
+
+tombolTema.addEventListener("click", () => {
+  document.documentElement.classList.toggle("dark");
+
+  if (document.documentElement.classList.contains("dark")) {
+    tombolTema.textContent = "☀️ Mode terang";
+  } else {
+    tombolTema.textContent = "🌙 Mode gelap";
+  }
+});

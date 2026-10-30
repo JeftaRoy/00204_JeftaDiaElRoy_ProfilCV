@@ -8,140 +8,256 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="js/script.js" defer></script>
+
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+  </style>
 </head>
 
-<header
-  class="bg-[#404040] text-white text-center px-4 py-6 flex flex-col items-center gap-2 md:flex-row md:justify-center md:gap-6 md:text-left">
-  <img src="images/foto-profil.jpg" alt="Foto profil Jefta Dia El Roy"
-    class="w-20 h-20 rounded-full border-4 border-white object-cover md:w-28 md:h-28">
-  <h1 class="text-3xl font-bold">Jefta Dia El Roy</h1>
-  <p class="text-white/90">Mahasiswa Sistem Informasi | UDINUS PSDKU Kediri</p>
-</header>
+<body class="dark:bg-[#171717] dark:text-[#f5f5f5]">
 
-<nav class="bg-white border-b border-[#d4d4d4] py-2 sticky top-0 z-10">
-  <button id="tombol-menu" type="button"
-    class="block mx-auto px-4 py-2 rounded-xl font-semibold text-gray-800 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:hidden">
-    ☰ Menu
-  </button>
-  <ul id="menu-nav" class="hidden flex-col items-center gap-2 md:flex md:flex-row md:flex-wrap md:justify-center">
-    <li>
-      <a href="#tentang"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Tentang
-        Saya</a>
-    </li>
-    <li>
-      <a href="#pendidikan"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Pendidikan</a>
-    </li>
-    <li>
-      <a href="#keahlian"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Keahlian</a>
-    </li>
-    <li>
-      <a href="#organisasi"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Organisasi</a>
-    </li>
-    <li>
-      <a href="#pengalaman"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Pengalaman
-        Kerja</a>
-    </li>
-    <li>
-      <a href="#kontak"
-        class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">Kontak</a>
-    </li>
-  </ul>
-</nav>
+  <header
+    class="bg-[#404040] text-white text-center px-4 py-6 flex flex-col items-center gap-2 md:flex-row md:justify-center md:gap-6 md:text-left">
 
-<main class="max-w-3xl mx-auto my-6 px-4 md:max-w-4xl">
+    <img src="images/foto-profil.jpg" alt="Foto profil Jefta Dia El Roy"
+      class="w-20 h-20 rounded-full border-4 border-white object-cover md:w-28 md:h-28">
 
-  <section id="tentang" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 scroll-mt-[75px]">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Tentang Saya</h2>
-    <p class="text-[#737373]">
-      Saya adalah mahasiswa Sistem Informasi semester 3 yang tertarik pada pengembangan teknologi dan pembuatan
-      website. Saya memiliki ketertarikan dalam membangun antarmuka web yang rapi, sederhana, dan mudah digunakan.
-      Saya terus mengembangkan kemampuan di bidang teknologi informasi melalui berbagai tugas dan proyek perkuliahan.
-      Ke depannya, saya ingin terus belajar dan meningkatkan kemampuan untuk menciptakan solusi digital yang
-      bermanfaat.
-    </p>
-  </section>
+    <h1 class="text-3xl font-bold">Jefta Dia El Roy</h1>
 
-  <section id="pendidikan" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Pendidikan</h2>
-    <ul>
+    <p class="text-white/90">Mahasiswa Sistem Informasi | UDINUS PSDKU Kediri</p>
+
+    <button id="tombol-tema" type="button"
+      class="px-4 py-2 rounded-xl bg-white/20 text-white font-semibold hover:bg-white/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+      🌙 Mode gelap
+    </button>
+
+  </header>
+
+  <nav
+    <nav class="bg-white border-b border-[#d4d4d4] py-2 sticky top-0 z-10 dark:bg-[#262626] dark:border-[#525252]">
+
+    <button id="tombol-menu" type="button"
+      class="block mx-auto px-4 py-2 rounded-xl font-semibold text-[#262626] hover:bg-[#e5e5e5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] md:hidden dark:text-[#f5f5f5] dark:hover:bg-[#525252]">
+      ☰ Menu
+    </button>
+
+    <ul id="menu-nav"
+      class="hidden flex-col items-center gap-2 md:flex md:flex-row md:flex-wrap md:justify-center">
+
       <li>
-        <h3 class="text-lg font-semibold">S1 Sistem Informasi — Universitas Dian Nuswantoro PSDKU Kediri</h3>
-        <p class="text-[#737373]">2025 - sekarang</p>
+        <a href="#tentang"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Tentang Saya
+        </a>
       </li>
+
       <li>
-        <h3 class="text-lg font-semibold">SMKN 1 Boyolangu</h3>
-        <p class="text-[#737373]">2021 - 2024</p>
+        <a href="#pendidikan"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Pendidikan
+        </a>
       </li>
+
       <li>
-        <h3 class="text-lg font-semibold">SMPN 3 Tulungagung</h3>
-        <p class="text-[#737373]">2019 - 2022</p>
+        <a href="#keahlian"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Keahlian
+        </a>
       </li>
+
       <li>
-        <h3 class="text-lg font-semibold">SD Kristen Petra Tulungagung</h3>
-        <p class="text-[#737373]">2013 - 2019</p>
+        <a href="#organisasi"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Organisasi
+        </a>
       </li>
+
+      <li>
+        <a href="#pengalaman"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Pengalaman Kerja
+        </a>
+      </li>
+
+      <li>
+        <a href="#kontak"
+          class="block px-4 py-2 rounded-xl font-semibold text-[#262626] no-underline hover:bg-[#e5e5e5] hover:text-[#404040] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040] dark:text-[#f5f5f5] dark:hover:bg-[#525252] dark:hover:text-white">
+          Kontak
+        </a>
+      </li>
+
     </ul>
-  </section>
+  </nav>
 
-  <section id="keahlian" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Keahlian</h2>
+  <main class="max-w-3xl mx-auto my-6 px-4 md:max-w-4xl">
 
-    <ul id="daftar-skill" class="grid grid-cols-2 gap-2 md:grid-cols-4"></ul>
-  </section>
+    <!-- Tentang Saya -->
+    <section id="tentang"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 scroll-mt-[75px] dark:bg-[#262626] dark:border-[#525252]">
 
-  <section id="organisasi" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Pengalaman Organisasi</h2>
-    <ul>
-      <li>
-        <h3 class="text-lg font-semibold">Tim Multimedia GKI Tulungagung</h3>
-        <p class="text-[#737373]">Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti
-          menyiapkan materi
-          presentasi, video, dan perangkat pendukung.</p>
-      </li>
-      <li>
-        <h3 class="text-lg font-semibold">Pelayanan Musik Gereja</h3>
-        <p class="text-[#737373]">Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.</p>
-      </li>
-    </ul>
-  </section>
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+        Tentang Saya
+      </h2>
 
-  <section id="pengalaman" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Pengalaman Kerja</h2>
-    <ul>
-      <li>
-        <h3 class="text-lg font-semibold">Senior Googling Specialist — Google</h3>
-        <p class="text-[#737373]">2022 - 2024</p>
-      </li>
-      <li>
-        <h3 class="text-lg font-semibold">Professional Windows User — Microsoft</h3>
-        <p class="text-[#737373]">2021 - 2023</p>
-      </li>
-      <li>
-        <h3 class="text-lg font-semibold">GPU Performance Analyst — NVIDIA</h3>
-        <p class="text-[#737373]">2023 - sekarang</p>
-      </li>
-    </ul>
-  </section>
+      <p class="text-[#737373] dark:text-[#a3a3a3]">
+        Saya adalah mahasiswa Sistem Informasi semester 3 yang tertarik pada pengembangan teknologi dan pembuatan
+        website. Saya memiliki ketertarikan dalam membangun antarmuka web yang rapi, sederhana, dan mudah digunakan.
+        Saya terus mengembangkan kemampuan di bidang teknologi informasi melalui berbagai tugas dan proyek perkuliahan.
+        Ke depannya, saya ingin terus belajar dan meningkatkan kemampuan untuk menciptakan solusi digital yang
+        bermanfaat.
+      </p>
 
-  <section id="kontak" class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4">
-    <h2 class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4]">Kontak</h2>
-    <ul>
-      <li><a href="mailto:jeftadiaelroy13@gmail.com">jeftadiaelroy13@gmail.com</a></li>
-      <li><a href="https://instagram.com/jeftaroyyy" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://github.com/JeftaRoy" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
-  </section>
+    </section>
 
-</main>
+    <!-- Pendidikan -->
+    <section id="pendidikan"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 dark:bg-[#262626] dark:border-[#525252]">
 
-<footer class="text-center text-[#737373] text-sm px-4 py-6">
-  <p>&copy; 2026 Jefta Dia El Roy</p>
-</footer>
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+
+        <button id="tombol-pendidikan" type="button"
+          class="w-full flex justify-between items-center text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#404040]">
+
+          Pendidikan <span id="ikon-pendidikan">▾</span>
+
+        </button>
+      </h2>
+
+      <ul id="isi-pendidikan">
+
+        <li>
+          <h3 class="text-lg font-semibold">S1 Sistem Informasi — Universitas Dian Nuswantoro PSDKU Kediri</h3>
+          <p class="text-gray-500 dark:text-[#a3a3a3]">2025 - sekarang</p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">SMKN 1 Boyolangu</h3>
+          <p class="text-gray-500 dark:text-[#a3a3a3]">2021 - 2024</p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">SMPN 3 Tulungagung</h3>
+          <p class="text-gray-500 dark:text-[#a3a3a3]">2019 - 2022</p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">SD Kristen Petra Tulungagung</h3>
+          <p class="text-gray-500 dark:text-[#a3a3a3]">2013 - 2019</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Keahlian -->
+    <section id="keahlian"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 dark:bg-[#262626] dark:border-[#525252]">
+
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+        Keahlian
+      </h2>
+
+      <ul id="daftar-skill" class="grid grid-cols-2 gap-2 md:grid-cols-4"></ul>
+
+    </section>
+
+    <!-- Pengalaman Organisasi -->
+    <section id="organisasi"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 dark:bg-[#262626] dark:border-[#525252]">
+
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+        Pengalaman Organisasi
+      </h2>
+
+      <ul>
+        <li>
+          <h3 class="text-lg font-semibold">Tim Multimedia GKI Tulungagung</h3>
+          <p class="text-[#737373] dark:text-[#a3a3a3]">
+            Mengelola kebutuhan multimedia dalam kegiatan ibadah dan acara gereja, seperti menyiapkan materi
+            presentasi, video, dan perangkat pendukung.
+          </p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">Pelayanan Musik Gereja</h3>
+          <p class="text-[#737373] dark:text-[#a3a3a3]">
+            Berpartisipasi dalam pelayanan ibadah dan kegiatan gereja.
+          </p>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="pengalaman"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 dark:bg-[#262626] dark:border-[#525252]">
+
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+        Pengalaman Kerja
+      </h2>
+
+      <ul>
+        <li>
+          <h3 class="text-lg font-semibold">Senior Googling Specialist — Google</h3>
+          <p class="text-[#737373] dark:text-[#a3a3a3]">2022 - 2024</p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">Professional Windows User — Microsoft</h3>
+          <p class="text-[#737373] dark:text-[#a3a3a3]">2021 - 2023</p>
+        </li>
+
+        <li>
+          <h3 class="text-lg font-semibold">GPU Performance Analyst — NVIDIA</h3>
+          <p class="text-[#737373] dark:text-[#a3a3a3]">2023 - sekarang</p>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak"
+      class="bg-white border border-[#d4d4d4] rounded-xl shadow-sm p-6 mb-4 dark:bg-[#262626] dark:border-[#525252]">
+
+      <h2
+        class="text-2xl font-bold text-[#404040] mb-4 pb-2 border-b border-[#d4d4d4] dark:text-[#f5f5f5] dark:border-[#525252]">
+        Kontak
+      </h2>
+
+      <ul>
+        <li>
+          <a href="mailto:jeftadiaelroy13@gmail.com"
+            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+            jeftadiaelroy13@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a href="https://instagram.com/jeftaroyyy" target="_blank" rel="noopener"
+            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+            Instagram
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/JeftaRoy" target="_blank" rel="noopener"
+            class="text-blue-700 underline hover:text-blue-900 dark:text-[#d4d4d4] dark:hover:text-white">
+            GitHub
+          </a>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <footer class="text-center text-[#737373] text-sm px-4 py-6 dark:text-[#a3a3a3]">
+    <p>&copy; 2026 Jefta Dia El Roy</p>
+  </footer>
 
 </body>
 
