@@ -1,2 +1,48 @@
-let nama = "Jefta Dia El Roy";
-const umur = 19;
+// Langkah 2 · Cek koneksi file
+console.log("script.js terhubung!");
+
+// Langkah 3 · Variabel, tipe data, object
+const profil = {
+  nama: "Jefta Dia El Roy",
+  prodi: "Sistem Informasi",
+  semester: 3,
+};
+
+const sapaan = `Halo, saya ${profil.nama}, mahasiswa ${profil.prodi} semester ${profil.semester}.`;
+console.log(sapaan);
+console.log(typeof profil.nama, typeof profil.semester);
+
+// Langkah 4 · Array of object + loop
+const keahlian = [
+  { nama: "HTML5", level: "mahir" },
+  { nama: "CSS3", level: "mahir" },
+  { nama: "Tailwind CSS", level: "belajar" },
+  { nama: "JavaScript", level: "belajar" },
+];
+
+console.log(`Jumlah keahlian: ${keahlian.length}`);
+
+for (const skill of keahlian) {
+  console.log(`${skill.nama} (${skill.level})`);
+}
+
+// Langkah 5 · Fungsi + percabangan -> render ke halaman
+const daftarSkill = document.getElementById("daftar-skill");
+
+const buatPil = (skill) => {
+  const li = document.createElement("li");
+  li.textContent = skill.nama;
+  li.className = "text-sm font-semibold px-3 py-1 rounded-full text-center";
+
+  if (skill.level === "mahir") {
+    li.classList.add("bg-blue-700", "text-white");
+  } else {
+    li.classList.add("bg-blue-100", "text-gray-800");
+  }
+
+  return li;
+};
+
+for (const skill of keahlian) {
+  daftarSkill.append(buatPil(skill));
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,50 @@
 
     <script src="js/script.js"></script>
 
+    <style>
+        .merah {
+            color: red;
+        }
+
+        @keyframes goyang {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="judul">Coba JavaScript</h1>
+    <button id="tombol-ubah">Ubah</button>
+
     <script>
-        console.log("Halo, " + nama);
-        console.log(`Umur saya adalah ${umur}`);
+        const mhs = ["Rehan", "Sanda", "Jefta"];
+
+        for (const maha of mhs) {
+            console.log(maha);
+        }
+
+        const judul = document.getElementById("judul");
+        judul.innerText = `${mhs[2]} coba pencet`;
+
+        // cari elemen dengan id tombol-ubah di HTML
+        const tombol = document.getElementById("tombol-ubah");
+
+        // kalau tombolnya diklik, kita ngapain?
+        tombol.addEventListener("click", () => {
+            if (judul.classList.contains("merah")) {
+                judul.innerText = `${mhs[2]} Jir`;
+                judul.classList.remove("merah");
+                tombol.innerText = "Balikin ke Rehan";
+            } else {
+                judul.innerText = `${mhs[0]} Halo`;
+                judul.classList.add("merah");
+                tombol.innerText = "Ubah jadi Jefta";
+            }
+        });
 
     </script>
-</head>
-<body>
-    <h1>Coba JavaScript</h1>
-    <button>Ubah</button>
 </body>
+
 </html>
