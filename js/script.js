@@ -64,6 +64,30 @@ for (const skill of keahlian) {
   daftarSkill.append(buatPil(skill));
 }
 
+// Langkah 6 · Form tambah keahlian
+const formKeahlian = document.querySelector("#form-keahlian");
+const inputSkill = document.querySelector("#input-skill");
+const inputLevel = document.querySelector("#input-level");
+
+formKeahlian.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const skillBaru = {
+        nama: inputSkill.value.trim(),
+        level: inputLevel.value,
+    };
+
+    if (skillBaru.nama === "") {
+        return;
+    }
+
+    keahlian.push(skillBaru);
+
+    daftarSkill.append(buatPil(skillBaru));
+
+    formKeahlian.reset();
+});
+
 // Langkah 7 · Hamburger: buka/tutup menu
 const tombolMenu = document.querySelector("#tombol-menu");
 const menuNav = document.querySelector("#menu-nav");
